@@ -1,0 +1,14 @@
+.contentPostItem{
+    display: flex;
+}
+
+.contentPostItemUser{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contentPostItemLikes{
+    align-self: flex-end;
+}

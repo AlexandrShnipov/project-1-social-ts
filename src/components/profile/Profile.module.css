@@ -1,0 +1,56 @@
+.contentImgWrap{
+    max-height: 23rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.contentImg{
+    width: 100%;
+    object-fit: cover;
+}
+
+.contentUserInfo,
+.contentPosts{
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.contentUserInfo{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.contentUserImg{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+}
+
+.contentPostsTitle{
+    margin-bottom: .5rem;
+}
+
+.contentPostNew{
+    margin-bottom: 1rem;
+}
+
+.contentPostNewText{
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.contentPostItem{
+    display: flex;
+}
+
+.contentPostItemUser{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contentPostItemLikes{
+    align-self: flex-end;
+}

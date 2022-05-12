@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './Reset.css'
+import Header from "./components/header/Header";
+import NavBar from "./components/navBar/NavBar";
+import Profile from "./components/profile/Profile";
+import News from "./components/news/News";
+import Music from "./components/music/Music";
+import Setting from "./components/setting/Setting";
+import Messages from "./components/messages/Messages";
+import {BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div className="appWrap">
+                <Header/>
+                <NavBar/>
+                <main className={'content'}>
+                    <Routes>
+                        <Route path={'/profile/*'} element={<Profile/>}/>
+                        <Route path={'/messages/*'} element={<Messages/>}/>
+                        <Route path={'/news/*'} element={<News/>}/>
+                        <Route path={'/music/*'} element={<Music/>}/>
+                        <Route path={'/setting/*'} element={<Setting/>}/>
+                    </Routes>
+
+                </main>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

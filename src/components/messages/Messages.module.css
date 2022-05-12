@@ -1,0 +1,32 @@
+.dialogs{
+    padding: .5rem;
+    color: white;
+}
+
+.dialogsTile{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.dialogsItems{
+    display: flex;
+    gap: 3rem;
+}
+
+.dialogItemUser{
+    margin-bottom: .5rem;
+}
+
+.dialogItemUserLink{
+    color: inherit;
+    transition: color .5s;
+    padding-bottom: .5rem;
+}
+
+.dialogItemUserLink:hover{
+    color: saddlebrown;
+}
+
+.active{
+    color:gold;
+}

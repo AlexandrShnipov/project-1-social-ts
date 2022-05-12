@@ -1,0 +1,18 @@
+.contentPosts{
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.contentPostsTitle{
+    margin-bottom: .5rem;
+}
+
+.contentPostNew{
+    margin-bottom: 1rem;
+}
+
+.contentPostNewText{
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem;
+}
