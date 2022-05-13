@@ -1,0 +1,17 @@
+.dialogItemUser{
+    margin-bottom: .5rem;
+}
+
+.dialogItemUserLink{
+    color: inherit;
+    transition: color .5s;
+    padding-bottom: .5rem;
+}
+
+.dialogItemUserLink:hover{
+    color: saddlebrown;
+}
+
+.active{
+    color:gold;
+}

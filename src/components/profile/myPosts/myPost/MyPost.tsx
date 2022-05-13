@@ -1,13 +1,8 @@
 import React from "react";
 import s from './MyPost.module.css';
+import {PostType} from "../../../../index";
 
-type MyPostPropsType = {
-    id?: string
-    message: string
-    likesCount: number
-}
-
-const MyPost = (props: MyPostPropsType) => {
+const MyPost = (props: PostType) => {
     return (
         <article className={s.contentPostItem}>
             <img className={s.contentPostItemUser} src="https://lwlies.com/wp-content/uploads/2017/04/avatar-2009.jpg"

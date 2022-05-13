@@ -10,8 +10,15 @@ import Setting from "./components/setting/Setting";
 import Messages from "./components/messages/Messages";
 import {BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
+import {MessageElementType, MessageTextType, PostType} from "./index";
 
-function App() {
+type AppPropsType = {
+    messagesElement: Array<MessageElementType>;
+    messagesText: Array<MessageTextType>;
+    posts: Array<PostType>;
+}
+
+function App(props: AppPropsType) {
     return (
         <BrowserRouter>
             <div className="appWrap">
@@ -19,8 +26,15 @@ function App() {
                 <NavBar/>
                 <main className={'content'}>
                     <Routes>
-                        <Route path={'/profile/*'} element={<Profile/>}/>
-                        <Route path={'/messages/*'} element={<Messages/>}/>
+                        <Route path={'/profile/*'} element={<Profile posts={props.posts}/>}/>
+                        <Route
+                            path={'/messages/*'}
+                            element={
+                            <Messages
+                                messagesElement={props.messagesElement}
+                                messagesText={props.messagesText}
+                            />}
+                        />
                         <Route path={'/news/*'} element={<News/>}/>
                         <Route path={'/music/*'} element={<Music/>}/>
                         <Route path={'/setting/*'} element={<Setting/>}/>
