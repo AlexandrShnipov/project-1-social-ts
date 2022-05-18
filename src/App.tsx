@@ -8,14 +8,13 @@ import News from "./components/news/News";
 import Music from "./components/music/Music";
 import Setting from "./components/setting/Setting";
 import Messages from "./components/messages/Messages";
-import {BrowserRouter } from "react-router-dom";
-import { Route, Routes } from "react-router";
-import {MessageElementType, MessageTextType, PostType} from "./index";
+import {BrowserRouter} from "react-router-dom";
+import {Route, Routes} from "react-router";
+import {StateType} from "./redux/state";
+import Friends from "./components/friends/Friends";
 
 type AppPropsType = {
-    messagesElement: Array<MessageElementType>;
-    messagesText: Array<MessageTextType>;
-    posts: Array<PostType>;
+    state: StateType,
 }
 
 function App(props: AppPropsType) {
@@ -23,21 +22,21 @@ function App(props: AppPropsType) {
         <BrowserRouter>
             <div className="appWrap">
                 <Header/>
-                <NavBar/>
+                <NavBar stateNavBar={props.state.navBar}/>
                 <main className={'content'}>
                     <Routes>
-                        <Route path={'/profile/*'} element={<Profile posts={props.posts}/>}/>
+                        <Route
+                            path={'/profile/*'}
+                            element={<Profile stateProfile={props.state.profilePage}/>}
+                        />
                         <Route
                             path={'/messages/*'}
-                            element={
-                            <Messages
-                                messagesElement={props.messagesElement}
-                                messagesText={props.messagesText}
-                            />}
+                            element={<Messages stateMessages={props.state.dialogsPage}/>}
                         />
                         <Route path={'/news/*'} element={<News/>}/>
                         <Route path={'/music/*'} element={<Music/>}/>
                         <Route path={'/setting/*'} element={<Setting/>}/>
+                        <Route path={'/friends/*'} element={<Friends/>}/>
                     </Routes>
 
                 </main>

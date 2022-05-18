@@ -2,21 +2,30 @@ import React from "react";
 import s from './Messages.module.css';
 import DialogItem from "./dialogItem/DialogItem";
 import Message from "./message/Message";
-import {MessageElementType, MessageTextType} from "../../index";
+import {DialogsPageType, MessageElementType, MessageTextType} from "../../redux/state";
+
 
 type MessagesPropsType = {
-    messagesElement: Array<MessageElementType>;
-    messagesText: Array<MessageTextType>;
+    stateMessages: DialogsPageType,
 }
 
 const Messages = (props: MessagesPropsType) => {
 
-    let messagesName = props.messagesElement.map((elementName: MessageElementType) => <DialogItem key={elementName.id} id={elementName.id} name={elementName.name}/>)
-    let messages = props.messagesText.map((message: MessageTextType) => <Message key={message.id} id={message.id} message={message.message}/>)
+    let messagesName = props.stateMessages.messagesElements.map((elementName: MessageElementType) =>
+        <DialogItem
+            key={elementName.id}
+            id={elementName.id}
+            name={elementName.name}
+            photo={elementName.photo}/>)
+    let messages = props.stateMessages.messagesText.map((message: MessageTextType) =>
+        <Message
+            key={message.id}
+            id={message.id}
+            message={message.message}/>)
 
     return (
         <div className={s.dialogs}>
-            <h2 className={s.dialogsTile}>Dialogs</h2>
+            <h2 className={s.dialogsTile}>Messages</h2>
             <div className={s.dialogsItems}>
                 <div className={s.dialogItem}>
                     {messagesName}

@@ -3,9 +3,19 @@
 }
 
 .dialogItemUserLink{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     color: inherit;
     transition: color .5s;
     padding-bottom: .5rem;
+}
+
+.dialogUserPhoto{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .dialogItemUserLink:hover{

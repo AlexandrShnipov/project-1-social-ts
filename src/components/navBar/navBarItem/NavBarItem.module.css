@@ -1,0 +1,17 @@
+.navBarItemLink{
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.navBarItem{
+    margin-bottom: 1.5rem;
+}
+
+.navBarItem:nth-child(4){
+    margin-bottom: 2rem;
+}
+
+a.active{
+    color: gold;
+}
