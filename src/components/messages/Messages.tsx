@@ -3,6 +3,8 @@ import s from './Messages.module.css';
 import DialogItem from "./dialogItem/DialogItem";
 import Message from "./message/Message";
 import {DialogsPageType, MessageElementType, MessageTextType} from "../../redux/state";
+import ContainerPage from "../../common/containerPage/ContainerPage";
+import PageTitle from "../../common/pageTitle/PageTitle";
 
 
 type MessagesPropsType = {
@@ -24,18 +26,20 @@ const Messages = (props: MessagesPropsType) => {
             message={message.message}/>)
 
     return (
-        <div className={s.dialogs}>
-            <h2 className={s.dialogsTile}>Messages</h2>
-            <div className={s.dialogsItems}>
-                <div className={s.dialogItem}>
-                    {messagesName}
+        <ContainerPage>
+            <div className={s.dialogs}>
+                <PageTitle title={'Messages'}/>
+                <div className={s.dialogsItems}>
+                    <div className={s.dialogItem}>
+                        {messagesName}
 
-                </div>
-                <div className={s.dialogItemMessageWrap}>
-                    {messages}
+                    </div>
+                    <div className={s.dialogItemMessageWrap}>
+                        {messages}
+                    </div>
                 </div>
             </div>
-        </div>
+        </ContainerPage>
     )
 }
 
