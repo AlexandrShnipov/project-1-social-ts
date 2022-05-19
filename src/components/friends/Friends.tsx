@@ -1,12 +1,12 @@
 import React from "react";
 import s from './Friends.module.css';
 import ContainerPage from "../../common/containerPage/ContainerPage";
-import PageTitle from "../../common/pageTitle/PageTitle";
+import TitlePage from "../../common/TitlePage/TitlePage";
 
 const Friends = () => {
     return (
         <ContainerPage>
-           <PageTitle title={"Friends"}/>
+           <TitlePage title={"Friends"}/>
         </ContainerPage>
     )
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import s from './Music.module.css';
 import ContainerPage from "../../common/containerPage/ContainerPage";
-import PageTitle from "../../common/pageTitle/PageTitle";
+import TitlePage from "../../common/TitlePage/TitlePage";
 
 const Music = () => {
     return (
         <ContainerPage>
-           <PageTitle title={"Music"}/>
+           <TitlePage title={"Music"}/>
         </ContainerPage>
     )
 }

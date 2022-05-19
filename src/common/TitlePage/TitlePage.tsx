@@ -1,13 +1,13 @@
 import React from "react";
-import s from './PageTitle.module.css';
+import s from './TitlePage.module.css';
 
 type PageTitlePropsType = {
     title: string;
 }
 
-const PageTitle = (props: PageTitlePropsType) => {
+const TitlePage = (props: PageTitlePropsType) => {
     return (
         <h2 className={s.title}>{props.title}</h2>
     )
 }
-export default PageTitle;
+export default TitlePage;

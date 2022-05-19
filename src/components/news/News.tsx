@@ -1,12 +1,12 @@
 import React from "react";
 import s from './News.module.css';
 import ContainerPage from "../../common/containerPage/ContainerPage";
-import PageTitle from "../../common/pageTitle/PageTitle";
+import TitlePage from "../../common/TitlePage/TitlePage";
 
 const News = () => {
     return (
         <ContainerPage>
-            <PageTitle title={'News'}/>
+            <TitlePage title={'News'}/>
         </ContainerPage>
     )
 }

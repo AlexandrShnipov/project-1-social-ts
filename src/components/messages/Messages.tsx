@@ -4,7 +4,7 @@ import DialogItem from "./dialogItem/DialogItem";
 import Message from "./message/Message";
 import {DialogsPageType, MessageElementType, MessageTextType} from "../../redux/state";
 import ContainerPage from "../../common/containerPage/ContainerPage";
-import PageTitle from "../../common/pageTitle/PageTitle";
+import TitlePage from "../../common/TitlePage/TitlePage";
 
 
 type MessagesPropsType = {
@@ -28,7 +28,7 @@ const Messages = (props: MessagesPropsType) => {
     return (
         <ContainerPage>
             <div className={s.dialogs}>
-                <PageTitle title={'Messages'}/>
+                <TitlePage title={'Messages'}/>
                 <div className={s.dialogsItems}>
                     <div className={s.dialogItem}>
                         {messagesName}

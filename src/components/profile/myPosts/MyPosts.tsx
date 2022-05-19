@@ -2,7 +2,7 @@ import React from "react";
 import s from './MyPosts.module.css';
 import MyPost from "./myPost/MyPost";
 import {PostType} from "../../../redux/state";
-import PageTitle from "../../../common/pageTitle/PageTitle";
+import TitlePage from "../../../common/TitlePage/TitlePage";
 
 type MyPostsPropsType = {
     posts: Array<PostType>;
@@ -20,7 +20,7 @@ const MyPosts = (props: MyPostsPropsType) => {
     return (
        <>
            <div className={s.contentPosts}>
-               <PageTitle title={'My posts'}/>
+               <TitlePage title={'My posts'}/>
                <article className={s.contentPostNew}>
                    <textarea className={s.contentPostNewText}></textarea>
                    <button className={s.contentPostNewButton}>add post</button>

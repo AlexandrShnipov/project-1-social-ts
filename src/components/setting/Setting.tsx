@@ -1,12 +1,12 @@
 import React from "react";
 import s from './Setting.module.css';
 import ContainerPage from "../../common/containerPage/ContainerPage";
-import PageTitle from "../../common/pageTitle/PageTitle";
+import TitlePage from "../../common/TitlePage/TitlePage";
 
 const Setting = () => {
     return (
         <ContainerPage>
-            <PageTitle title={'Setting'}/>
+            <TitlePage title={'Setting'}/>
         </ContainerPage>
     )
 }
