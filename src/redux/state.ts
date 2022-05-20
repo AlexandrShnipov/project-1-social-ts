@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import {renderEntireTree} from "../render";
 
 export type PostType = {
     id: string;
@@ -87,6 +88,14 @@ let state: StateType = {
             {id: '3', name: 'Sveta', photo: 'https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/100x64_3'},
         ],
     }
+}
+
+export const addPost = (newMessage: string): void  => {
+    let newPost = {
+        id: '3', message: newMessage, likesCount: 0,
+    };
+    state.profilePage.posts.push(newPost);
+    renderEntireTree(state);
 }
 
 export default state;

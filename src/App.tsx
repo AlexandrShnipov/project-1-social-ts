@@ -15,6 +15,7 @@ import Friends from "./components/friends/Friends";
 
 type AppPropsType = {
     state: StateType,
+    addPost: (value: string) => void,
 }
 
 function App(props: AppPropsType) {
@@ -25,9 +26,16 @@ function App(props: AppPropsType) {
                 <NavBar stateNavBar={props.state.navBar}/>
                 <main className={'content'}>
                     <Routes>
+                        <Route path="/" element={<Profile
+                            stateProfile={props.state.profilePage}
+                            addPost={props.addPost}
+                        />} />
                         <Route
                             path={'/profile/*'}
-                            element={<Profile stateProfile={props.state.profilePage}/>}
+                            element={<Profile
+                                stateProfile={props.state.profilePage}
+                                addPost={props.addPost}
+                            />}
                         />
                         <Route
                             path={'/messages/*'}
