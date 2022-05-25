@@ -1,12 +1,13 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import MyPost from "./myPost/MyPost";
-import {PostType} from "../../../redux/state";
+import {AddPostTextType, PostType} from "../../../redux/state";
 import TitlePage from "../../../common/TitlePage/TitlePage";
 
 type MyPostsPropsType = {
     posts: Array<PostType>;
     addPost: (value: string) => void;
+    addPostText: AddPostTextType;
 }
 
 const MyPosts = (props: MyPostsPropsType) => {
@@ -31,7 +32,7 @@ const MyPosts = (props: MyPostsPropsType) => {
             <div className={s.contentPosts}>
                 <TitlePage title={'My posts'}/>
                 <article className={s.contentPostNew}>
-                    <textarea className={s.contentPostNewText} ref={newPostElement}></textarea>
+                    <textarea className={s.contentPostNewText} ref={newPostElement} value={props.addPostText}></textarea>
                     <button className={s.contentPostNewButton} onClick={addPost}>add post</button>
                 </article>
                 <div className={s.contentPostsItems}>

@@ -1,4 +1,4 @@
-import state from "./redux/state";
+import state, {AddPostTextType} from "./redux/state";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -11,7 +11,9 @@ export const renderEntireTree = (state: StateType) => {
     root.render(
         <React.StrictMode>
             <App
-                state={state} addPost={addPost}/>
+                state={state}
+                addPost={addPost}
+            />
         </React.StrictMode>
     );
 }

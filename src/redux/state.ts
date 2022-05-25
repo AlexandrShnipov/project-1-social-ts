@@ -8,6 +8,8 @@ export type PostType = {
     likesCount: number;
 }
 
+export type AddPostTextType = string
+
 export type MessageElementType = {
     id: string;
     name: string;
@@ -33,6 +35,7 @@ export type ItemType = {
 
 export type ProfilePageType = {
     posts: Array<PostType>,
+    addPostText: AddPostTextType,
 }
 
 export type DialogsPageType ={
@@ -56,6 +59,7 @@ let state: StateType = {
             {id: '1', message: 'Hi my friends', likesCount: 11},
             {id: '2', message: `It's my first post!`, likesCount: 25}
         ],
+        addPostText: `Hi! I'm new post!!`,
     },
     dialogsPage: {
         messagesElements: [

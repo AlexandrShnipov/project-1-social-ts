@@ -10,7 +10,7 @@ import Setting from "./components/setting/Setting";
 import Messages from "./components/messages/Messages";
 import {BrowserRouter} from "react-router-dom";
 import {Route, Routes} from "react-router";
-import {StateType} from "./redux/state";
+import {AddPostTextType, StateType} from "./redux/state";
 import Friends from "./components/friends/Friends";
 
 type AppPropsType = {
@@ -27,19 +27,19 @@ function App(props: AppPropsType) {
                 <main className={'content'}>
                     <Routes>
                         <Route path="/" element={<Profile
-                            stateProfile={props.state.profilePage}
+                            stateProfilePage={props.state.profilePage}
                             addPost={props.addPost}
                         />} />
                         <Route
                             path={'/profile/*'}
                             element={<Profile
-                                stateProfile={props.state.profilePage}
+                                stateProfilePage={props.state.profilePage}
                                 addPost={props.addPost}
                             />}
                         />
                         <Route
                             path={'/messages/*'}
-                            element={<Messages stateMessages={props.state.dialogsPage}/>}
+                            element={<Messages stateMessagesPage={props.state.dialogsPage}/>}
                         />
                         <Route path={'/news/*'} element={<News/>}/>
                         <Route path={'/music/*'} element={<Music/>}/>

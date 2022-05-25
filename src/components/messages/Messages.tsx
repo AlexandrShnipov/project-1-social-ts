@@ -8,18 +8,18 @@ import TitlePage from "../../common/TitlePage/TitlePage";
 
 
 type MessagesPropsType = {
-    stateMessages: DialogsPageType,
+    stateMessagesPage: DialogsPageType,
 }
 
 const Messages = (props: MessagesPropsType) => {
 
-    let messagesName = props.stateMessages.messagesElements.map((elementName: MessageElementType) =>
+    let messagesName = props.stateMessagesPage.messagesElements.map((elementName: MessageElementType) =>
         <DialogItem
             key={elementName.id}
             id={elementName.id}
             name={elementName.name}
             photo={elementName.photo}/>)
-    let messages = props.stateMessages.messagesText.map((message: MessageTextType) =>
+    let messages = props.stateMessagesPage.messagesText.map((message: MessageTextType) =>
         <Message
             key={message.id}
             id={message.id}
