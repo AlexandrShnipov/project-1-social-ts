@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
-import {renderEntireTree} from "../render";
+import {renderEntireTree} from "../index";
+
 
 export type PostType = {
     id: string;
